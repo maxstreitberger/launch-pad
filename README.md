@@ -10,7 +10,7 @@ Launch Pad:
 - [3 Servos (We used MG996R)](https://www.amazon.de/Innovateking-EU-Transmission-Digital-Helicopter-Aeroplane/dp/B07JN7F9VY/ref=sr_1_1_sspa?crid=1F0H3ODMIICBQ&dchild=1&keywords=mg996r&qid=1619709898&sprefix=mg996%2Caps%2C169&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFZWTJQSk8wM1JXTlEmZW5jcnlwdGVkSWQ9QTAwODMyNzIzTTdSWTg4NVFIQ1QxJmVuY3J5cHRlZEFkSWQ9QTAwNzQ1MjgzTklGRkhIVzJOWDRKJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
 - [MPU6050 (Gryoscope + Accelerometer)](https://www.conrad.de/de/p/joy-it-mpu6050-beschleunigungs-sensor-1-st-passend-fuer-micro-bit-arduino-raspberry-pi-rock-pi-banana-pi-c-contro-2136256.html?hk=SEM&WT.srch=1&WT.mc_id=google_pla&s_kwcid=AL%2521222%25213%2521367270211499%2521%2521%2521g%2521%2521&ef_id=Cj0KCQjwo-aCBhC-ARIsAAkNQiusB49lNVCzrsqvmrv-dKNzPxioAxWXFdyhico_4f4Yvt2M8tDl9ZQaAlD6EALw_wcB%253AG%253As&gclid=Cj0KCQjwo-aCBhC-ARIsAAkNQiusB49lNVCzrsqvmrv-dKNzPxioAxWXFdyhico_4f4Yvt2M8tDl9ZQaAlD6EALw_wcB)
 - Optional: [Servo shield](https://www.amazon.de/-/en/PCA9685-Channel-Interface-Arduino-Raspberry/dp/B07V72VBJ4/ref=sr_1_4?dchild=1&keywords=PCA9685&qid=1619610045&sr=8-4)
-- Three AA batteries
+- Three AA batteries + battery holder (optional)
 
 Remote Controller
 - [ESP-32 with integrated LoRa (We are using the LILYGO TTGO LORA32)](https://www.banggood.com/2Pcs-LILYGO-TTGO-LORA32-868Mhz-ESP32-LoRa-OLED-0_96-Inch-Blue-Display-bluetooth-WIFI-ESP-32-Development-Board-Module-With-Antenna-p-1507044.html?cur_warehouse=CN&rmmds=search)
@@ -34,12 +34,4 @@ Remote Controller
 - https://github.com/PaulStoffregen/Encoder
 - https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library
 - https://github.com/sandeepmistry/arduino-LoRa
-
-
-### Dependencies
-
-
-
-
-
 
