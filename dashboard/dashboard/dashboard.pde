@@ -15,7 +15,7 @@ Table table;
 //Indicator of the number of the row that was looped through
 int rowCount = 0;
 
-String[] valueNames = {" Gyro_x", " GyroY", " GyroZ", " AccX", " AccY", " AccZ", " Pressure", " TempMS", " Height", " KalHeight"};
+String[] valueNames = {" GyroX", " GyroY", " GyroZ", " AccX", " AccY", " AccZ", " Pressure", " TempMS", " Height", " KalHeight"};
 
 int graphcount = valueNames.length;
 
@@ -62,9 +62,11 @@ void draw() {
   background(0);
 
 
-  float[] newValues;
+  float[] newTableValues;
+  String[] newValuePair;
   if(serialRead){
-    newValues = serialEvent(serialPort)
+    newValuePair = serialEvent(serialPort)
+    updateSerialRowValues(newValuePair)
   }
   else{
     if(rowCount < table.getRowCount()-1){
@@ -72,9 +74,10 @@ void draw() {
     }
     TableRow row = table.getRow(rowCount);
     newValues = readCSVRow(row);
+    updateRowValues(newValues);
   }
 
-  updateRowValues(newValues);
+
   drawGraphs(255);
   delay(70);
 }

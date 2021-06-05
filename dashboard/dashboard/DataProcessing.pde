@@ -1,13 +1,11 @@
-float[] serialEvent (Serial myPort) {
+String[] serialEvent (Serial myPort) {
 
   //String containing last received line of data
   String dataString = myPort.readStringUntil('\n');
-
-  if (dataString) {
+  if (dataString != null) {
     dataString = trim(dataString);
-
-    float[] newData = float(split(dataString, " "));
-    return newData;
+    String[] valuePair = String(split(dataString, " "));
+    return valuePair;
 
   }
 }
@@ -37,6 +35,10 @@ float[] readCSVRow(TableRow row){
 **/
 void updateRowValues(float[] newData){
 
+
+
+
+
   // i = column/graph number; value = v
   for (int i=0; i < graphcount; i++){             //for each column ( & graph)
     if (!Float.isNaN(newData[i])) {
@@ -48,4 +50,49 @@ void updateRowValues(float[] newData){
       graphValues[i][graphValues[i].length-1] = newData[i];
     }
   }
+}
+
+
+void updateSerialRowValues(String[] newData){
+
+  int nValue;
+  switch(newData[0]){
+    case 'gyro_x':
+      nValue = 0;
+      break;
+    case 'gyro_y':
+      nValue = 1;
+      break;
+    case 'gyro_z':
+      nValue = 2;
+      break;
+    case 'acc_x':
+      nValue = 3;
+      break;
+    case 'acc_y':
+      nValue = 4;
+      break;
+    case 'acc_z':
+      nValue = 5;
+      break;
+    case 'pressure':
+      nValue = 6;
+      break;
+    case 'temperature':
+      nValue = 7;
+      break;
+    case 'height':
+      nValue = 8;
+      break;
+    default 'ERROR':
+      break;
+  }
+
+  for (int v=0; v<graphValues[nValue].length-1; v++) {      //for every value in the respective column
+        //every value in the column gets pushed 1 index forward
+        graphValues[nValue][v] = graphValues[nValue][v+1];
+  }
+  //the last value gets updated to the newly read input
+  graphValues[nValue][graphValues[nValue].length-1] = float(newData[1]);
+
 }
