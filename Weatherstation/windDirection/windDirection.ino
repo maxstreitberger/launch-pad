@@ -2,7 +2,7 @@
 
 #include <Encoder.h>
 
-Encoder rotEncoder(5, 6);
+Encoder rotEncoder(14, 15);
 
 //Rotary "position" (counts up if moved to the right and down if moved to the left, no min and max)
 long rotPos, newRotPos;
